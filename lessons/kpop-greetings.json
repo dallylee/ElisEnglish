@@ -1,0 +1,170 @@
+{
+    "id": "kpop-greetings",
+    "title": "K-pop Star Greetings",
+    "theme": "kpop",
+    "difficultyLevel": "A0",
+    "estimatedMinutes": 15,
+    "vocabulary": [
+        {
+            "id": "hello",
+            "english": "Hello",
+            "croatian": "Bok",
+            "image": "/assets/images/hello.png",
+            "audio": "/assets/audio/hello.mp3"
+        },
+        {
+            "id": "goodbye",
+            "english": "Goodbye",
+            "croatian": "Doviđenja",
+            "image": "/assets/images/goodbye.png",
+            "audio": "/assets/audio/goodbye.mp3"
+        },
+        {
+            "id": "please",
+            "english": "Please",
+            "croatian": "Molim",
+            "image": "/assets/images/please.png",
+            "audio": "/assets/audio/please.mp3"
+        },
+        {
+            "id": "thankyou",
+            "english": "Thank you",
+            "croatian": "Hvala",
+            "image": "/assets/images/thankyou.png",
+            "audio": "/assets/audio/thankyou.mp3"
+        },
+        {
+            "id": "sorry",
+            "english": "Sorry",
+            "croatian": "Oprosti",
+            "image": "/assets/images/sorry.png",
+            "audio": "/assets/audio/sorry.mp3"
+        },
+        {
+            "id": "friend",
+            "english": "Friend",
+            "croatian": "Prijatelj",
+            "image": "/assets/images/friend.png",
+            "audio": "/assets/audio/friend.mp3"
+        }
+    ],
+    "dialogueCharacter": {
+        "name": "Luna",
+        "avatar": "/assets/images/kpop-character.png",
+        "theme": "kpop"
+    },
+    "dialogueTree": [
+        {
+            "id": "start",
+            "message": {
+                "id": "m1",
+                "speaker": "Luna",
+                "text": "Hello! I'm Luna, your K-pop friend! Ready to learn some greetings?"
+            },
+            "choices": [
+                {
+                    "id": "c1",
+                    "text": "Yes! I'm excited!",
+                    "nextMessageId": "excited"
+                },
+                {
+                    "id": "c2",
+                    "text": "I'm a bit nervous...",
+                    "nextMessageId": "nervous"
+                }
+            ]
+        },
+        {
+            "id": "excited",
+            "message": {
+                "id": "m2",
+                "speaker": "Luna",
+                "text": "That's great! Let's start with 'Hello'. In English we say 'Hello', but you can also say 'Hi'!"
+            },
+            "choices": [
+                {
+                    "id": "c3",
+                    "text": "Hello, Luna!",
+                    "nextMessageId": "practice"
+                },
+                {
+                    "id": "c4",
+                    "text": "Hi there!",
+                    "nextMessageId": "practice"
+                }
+            ]
+        },
+        {
+            "id": "nervous",
+            "message": {
+                "id": "m3",
+                "speaker": "Luna",
+                "text": "Don't worry! Learning English is fun and I'll help you every step! Let's try 'Hello'."
+            },
+            "choices": [
+                {
+                    "id": "c5",
+                    "text": "Okay, Hello!",
+                    "nextMessageId": "practice"
+                }
+            ]
+        },
+        {
+            "id": "practice",
+            "message": {
+                "id": "m4",
+                "speaker": "Luna",
+                "text": "Perfect! You're doing great! Now let's practice saying 'Thank you'. Ready?"
+            },
+            "choices": [
+                {
+                    "id": "c6",
+                    "text": "Thank you, Luna!",
+                    "nextMessageId": "end"
+                },
+                {
+                    "id": "c7",
+                    "text": "Thanks!",
+                    "nextMessageId": "end"
+                }
+            ]
+        },
+        {
+            "id": "end",
+            "message": {
+                "id": "m5",
+                "speaker": "Luna",
+                "text": "Excellent! You learned so well today! Keep practicing and you'll be amazing! Goodbye for now!"
+            }
+        }
+    ],
+    "games": [
+        {
+            "type": "flashcard",
+            "vocabulary": [
+                "hello",
+                "goodbye",
+                "please",
+                "thankyou",
+                "sorry",
+                "friend"
+            ]
+        },
+        {
+            "type": "multiple-choice",
+            "vocabulary": [
+                "hello",
+                "goodbye",
+                "please",
+                "thankyou"
+            ],
+            "settings": {
+                "mode": "word-to-translation"
+            }
+        },
+        {
+            "type": "dialogue",
+            "dialogueStartId": "start"
+        }
+    ]
+}

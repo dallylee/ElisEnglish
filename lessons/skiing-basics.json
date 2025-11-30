@@ -1,0 +1,176 @@
+{
+    "id": "skiing-basics",
+    "title": "Skiing Adventure on the Slopes",
+    "theme": "skiing",
+    "difficultyLevel": "A0",
+    "estimatedMinutes": 20,
+    "vocabulary": [
+        {
+            "id": "ski",
+            "english": "Ski",
+            "croatian": "Skija",
+            "image": "/assets/images/ski.png"
+        },
+        {
+            "id": "snow",
+            "english": "Snow",
+            "croatian": "Snijeg",
+            "image": "/assets/images/snow.png"
+        },
+        {
+            "id": "mountain",
+            "english": "Mountain",
+            "croatian": "Planina",
+            "image": "/assets/images/mountain.png"
+        },
+        {
+            "id": "cold",
+            "english": "Cold",
+            "croatian": "Hladno",
+            "image": "/assets/images/cold.png"
+        },
+        {
+            "id": "fast",
+            "english": "Fast",
+            "croatian": "Brzo",
+            "image": "/assets/images/fast.png"
+        },
+        {
+            "id": "fun",
+            "english": "Fun",
+            "croatian": "Zabavno",
+            "image": "/assets/images/fun.png"
+        },
+        {
+            "id": "helmet",
+            "english": "Helmet",
+            "croatian": "Kaciga",
+            "image": "/assets/images/helmet.png"
+        },
+        {
+            "id": "slope",
+            "english": "Slope",
+            "croatian": "Staza",
+            "image": "/assets/images/slope.png"
+        }
+    ],
+    "dialogueCharacter": {
+        "name": "Max",
+        "avatar": "/assets/images/ski-instructor.png",
+        "theme": "skiing"
+    },
+    "dialogueTree": [
+        {
+            "id": "start",
+            "message": {
+                "id": "m1",
+                "speaker": "Max",
+                "text": "Welcome to the mountain! I'm Max, your ski instructor. Are you ready for skiing?"
+            },
+            "choices": [
+                {
+                    "id": "c1",
+                    "text": "Yes! I love skiing!",
+                    "nextMessageId": "love-skiing"
+                },
+                {
+                    "id": "c2",
+                    "text": "I'm a beginner...",
+                    "nextMessageId": "beginner"
+                }
+            ]
+        },
+        {
+            "id": "love-skiing",
+            "message": {
+                "id": "m2",
+                "speaker": "Max",
+                "text": "Awesome! The mountain is beautiful today. The snow is perfect!"
+            },
+            "choices": [
+                {
+                    "id": "c3",
+                    "text": "Let's go fast!",
+                    "nextMessageId": "fast"
+                },
+                {
+                    "id": "c4",
+                    "text": "Is it cold?",
+                    "nextMessageId": "cold"
+                }
+            ]
+        },
+        {
+            "id": "beginner",
+            "message": {
+                "id": "m3",
+                "speaker": "Max",
+                "text": "No problem! Skiing is fun! First, you need a helmet for safety."
+            },
+            "choices": [
+                {
+                    "id": "c5",
+                    "text": "Okay, I have my helmet!",
+                    "nextMessageId": "helmet"
+                }
+            ]
+        },
+        {
+            "id": "fast",
+            "message": {
+                "id": "m4",
+                "speaker": "Max",
+                "text": "Ha ha! Yes, skiing can be very fast! But remember to be safe!"
+            }
+        },
+        {
+            "id": "cold",
+            "message": {
+                "id": "m5",
+                "speaker": "Max",
+                "text": "Yes, it's cold on the mountain, but skiing keeps you warm! Let's go!"
+            }
+        },
+        {
+            "id": "helmet",
+            "message": {
+                "id": "m6",
+                "speaker": "Max",
+                "text": "Perfect! Safety first! Now let's have fun on the slope!"
+            }
+        }
+    ],
+    "games": [
+        {
+            "type": "flashcard",
+            "vocabulary": [
+                "ski",
+                "snow",
+                "mountain",
+                "cold",
+                "fast",
+                "fun",
+                "helmet",
+                "slope"
+            ]
+        },
+        {
+            "type": "multiple-choice",
+            "vocabulary": [
+                "ski",
+                "snow",
+                "mountain",
+                "cold",
+                "helmet",
+                "slope"
+            ],
+            "settings": {
+                "mode": "word-to-translation"
+            }
+        },
+        {
+            "type": "dialogue",
+            "dialogueStartId": "start"
+        }
+    ]
+}

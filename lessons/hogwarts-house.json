@@ -1,0 +1,160 @@
+{
+    "id": "hogwarts-house",
+    "title": "Welcome to Hogwarts",
+    "theme": "harry_potter",
+    "difficultyLevel": "A0",
+    "estimatedMinutes": 15,
+    "vocabulary": [
+        {
+            "id": "wand",
+            "english": "Wand",
+            "croatian": "Štapić",
+            "image": "/assets/images/wand.png"
+        },
+        {
+            "id": "book",
+            "english": "Book",
+            "croatian": "Knjiga",
+            "image": "/assets/images/book.png"
+        },
+        {
+            "id": "owl",
+            "english": "Owl",
+            "croatian": "Sova",
+            "image": "/assets/images/owl.png"
+        },
+        {
+            "id": "castle",
+            "english": "Castle",
+            "croatian": "Dvorac",
+            "image": "/assets/images/castle.png"
+        },
+        {
+            "id": "magic",
+            "english": "Magic",
+            "croatian": "Čarolija",
+            "image": "/assets/images/magic.png"
+        },
+        {
+            "id": "student",
+            "english": "Student",
+            "croatian": "Učenik",
+            "image": "/assets/images/student.png"
+        }
+    ],
+    "dialogueCharacter": {
+        "name": "Hermione",
+        "avatar": "/assets/images/hermione.png",
+        "theme": "harry_potter"
+    },
+    "dialogueTree": [
+        {
+            "id": "start",
+            "message": {
+                "id": "m1",
+                "speaker": "Hermione",
+                "text": "Hello! Welcome to Hogwarts! I'm Hermione. Are you ready to learn English magic?"
+            },
+            "choices": [
+                {
+                    "id": "c1",
+                    "text": "Yes! Let's start!",
+                    "nextMessageId": "start-learning"
+                },
+                {
+                    "id": "c2",
+                    "text": "What is Hogwarts?",
+                    "nextMessageId": "explain"
+                }
+            ]
+        },
+        {
+            "id": "start-learning",
+            "message": {
+                "id": "m2",
+                "speaker": "Hermione",
+                "text": "Brilliant! Every student needs a wand. In English, we say 'wand' for the magic stick!"
+            },
+            "choices": [
+                {
+                    "id": "c3",
+                    "text": "I have my wand!",
+                    "nextMessageId": "books"
+                }
+            ]
+        },
+        {
+            "id": "explain",
+            "message": {
+                "id": "m3",
+                "speaker": "Hermione",
+                "text": "Hogwarts is a magic castle where students learn! It's wonderful!"
+            },
+            "choices": [
+                {
+                    "id": "c4",
+                    "text": "Wow! Amazing!",
+                    "nextMessageId": "books"
+                }
+            ]
+        },
+        {
+            "id": "books",
+            "message": {
+                "id": "m4",
+                "speaker": "Hermione",
+                "text": "Great! Now you also need books. I love books! They teach us so much!"
+            },
+            "choices": [
+                {
+                    "id": "c5",
+                    "text": "I like books too!",
+                    "nextMessageId": "end"
+                },
+                {
+                    "id": "c6",
+                    "text": "What books do I need?",
+                    "nextMessageId": "end"
+                }
+            ]
+        },
+        {
+            "id": "end",
+            "message": {
+                "id": "m5",
+                "speaker": "Hermione",
+                "text": "Perfect! You're going to be an excellent student! Keep practicing your English!"
+            }
+        }
+    ],
+    "games": [
+        {
+            "type": "flashcard",
+            "vocabulary": [
+                "wand",
+                "book",
+                "owl",
+                "castle",
+                "magic",
+                "student"
+            ]
+        },
+        {
+            "type": "multiple-choice",
+            "vocabulary": [
+                "wand",
+                "book",
+                "owl",
+                "castle",
+                "magic"
+            ],
+            "settings": {
+                "mode": "word-to-translation"
+            }
+        },
+        {
+            "type": "dialogue",
+            "dialogueStartId": "start"
+        }
+    ]
+}

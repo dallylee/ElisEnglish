@@ -1,0 +1,124 @@
+.badge-gallery {
+    padding: var(--space-xl) 0;
+}
+
+.badge-gallery h1 {
+    text-align: center;
+    margin-bottom: var(--space-xl);
+    color: var(--color-primary);
+}
+
+.badge-stats {
+    display: flex;
+    gap: var(--space-xl);
+    justify-content: center;
+    margin-bottom: var(--space-2xl);
+}
+
+.stat {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--space-xs);
+}
+
+.stat-number {
+    font-size: var(--font-size-4xl);
+    font-weight: var(--font-weight-bold);
+    font-family: var(--font-display);
+    color: var(--color-primary);
+}
+
+.stat-label {
+    font-size: var(--font-size-sm);
+    color: var(--color-text-secondary);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.badge-section {
+    margin-bottom: var(--space-3xl);
+}
+
+.badge-section h2 {
+    text-align: center;
+    margin-bottom: var(--space-md);
+}
+
+.section-hint {
+    text-align: center;
+    color: var(--color-text-secondary);
+    margin-bottom: var(--space-lg);
+}
+
+.badges-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: var(--space-lg);
+}
+
+.badge-card {
+    text-align: center;
+    padding: var(--space-xl);
+    transition: all var(--transition-base);
+}
+
+.badge-card.earned {
+    background: linear-gradient(135deg, #fff, #fef3c7);
+    border: 2px solid var(--color-warning);
+}
+
+.badge-card.earned:hover {
+    transform: translateY(-8px) scale(1.05);
+    box-shadow: var(--shadow-xl);
+}
+
+.badge-card.locked {
+    opacity: 0.6;
+    background: var(--color-bg-secondary);
+    border: 2px dashed var(--color-border);
+}
+
+.badge-icon-large {
+    font-size: 4rem;
+    margin-bottom: var(--space-md);
+}
+
+.locked-icon {
+    opacity: 0.4;
+}
+
+.badge-card h3 {
+    color: var(--color-primary);
+    margin-bottom: var(--space-sm);
+    font-size: var(--font-size-lg);
+}
+
+.badge-description {
+    color: var(--color-text-secondary);
+    font-size: var(--font-size-sm);
+    margin-bottom: var(--space-sm);
+}
+
+.badge-date {
+    font-size: var(--font-size-xs);
+    color: var(--color-text-tertiary);
+    font-style: italic;
+}
+
+.motivational-card {
+    text-align: center;
+    padding: var(--space-3xl);
+    background: linear-gradient(135deg, var(--color-bg-secondary), #fef3c7);
+}
+
+.motivational-card h3 {
+    color: var(--color-primary);
+    margin-bottom: var(--space-md);
+}
+
+@media (max-width: 768px) {
+    .badges-grid {
+        grid-template-columns: 1fr;
+    }
+}
