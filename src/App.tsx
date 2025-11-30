@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { HashRouter as Router, Routes, Route } from 'react-router-dom';
 import { ThemeProvider } from './contexts/ThemeContext';
 import { ProgressProvider } from './contexts/ProgressContext';
 import Layout from './components/Layout/Layout';
@@ -14,7 +14,7 @@ function App() {
   return (
     <ThemeProvider>
       <ProgressProvider>
-        <Router basename={import.meta.env.BASE_URL}>
+        <Router>
           <Layout>
             <Routes>
               <Route path="/" element={<HomeScreen />} />
