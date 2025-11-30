@@ -14,7 +14,7 @@ function App() {
   return (
     <ThemeProvider>
       <ProgressProvider>
-        <Router>
+        <Router basename="/ElisEnglish">
           <Layout>
             <Routes>
               <Route path="/" element={<HomeScreen />} />
