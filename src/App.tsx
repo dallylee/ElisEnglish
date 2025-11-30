@@ -14,7 +14,7 @@ function App() {
   return (
     <ThemeProvider>
       <ProgressProvider>
-        <Router basename="/ElisEnglish">
+        <Router basename={import.meta.env.BASE_URL}>
           <Layout>
             <Routes>
               <Route path="/" element={<HomeScreen />} />
