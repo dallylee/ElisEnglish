@@ -45,12 +45,35 @@ export interface DialogueCharacter {
     theme: Theme;
 }
 
-export interface GameConfig {
+export interface BaseGameConfig {
     type: GameType;
+    id?: string;
     vocabulary?: string[]; // IDs of vocabulary items to use
-    dialogueStartId?: string; // For dialogue games
-    settings?: Record<string, any>; // Game-specific settings
 }
+
+export interface FlashcardGameConfig extends BaseGameConfig {
+    type: 'flashcard';
+}
+
+export interface MultipleChoiceGameConfig extends BaseGameConfig {
+    type: 'multiple-choice';
+    settings?: {
+        mode: 'word-to-translation' | 'word-to-picture';
+        questionCount?: number;
+    };
+}
+
+export interface DialogueGameConfig extends BaseGameConfig {
+    type: 'dialogue';
+    dialogueStartId: string;
+}
+
+export interface MemoryGameConfig extends BaseGameConfig {
+    type: 'memory';
+    gridSize?: 4 | 6 | 8 | 12;
+}
+
+export type GameConfig = FlashcardGameConfig | MultipleChoiceGameConfig | DialogueGameConfig | MemoryGameConfig;
 
 export interface Lesson {
     id: string;

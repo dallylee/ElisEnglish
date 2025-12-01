@@ -165,6 +165,15 @@
         {
             "type": "dialogue",
             "dialogueStartId": "start"
+        },
+        {
+            "type": "memory",
+            "id": "game-4",
+            "vocabulary": [
+                "hello",
+                "thankyou",
+                "friend"
+            ]
         }
     ]
 }

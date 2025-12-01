@@ -1,0 +1,44 @@
+[
+    {
+        "file_name": "ski.png",
+        "generated_prompt": "A colorful, flat illustration of a pair of skis on snow, friendly and educational style, vibrant colors, 1024x1024",
+        "alt_text": "Colorful illustration of skis on snow",
+        "page_reference": "skiing-basics.json"
+    },
+    {
+        "file_name": "snow.png",
+        "generated_prompt": "A colorful, flat illustration of a snowflake or snowy landscape, friendly and educational style, vibrant colors, 1024x1024",
+        "alt_text": "Colorful illustration of a snowflake",
+        "page_reference": "skiing-basics.json"
+    },
+    {
+        "file_name": "mountain.png",
+        "generated_prompt": "A colorful, flat illustration of a snowy mountain peak, friendly and educational style, vibrant colors, 1024x1024",
+        "alt_text": "Colorful illustration of a snowy mountain",
+        "page_reference": "skiing-basics.json"
+    },
+    {
+        "file_name": "cold.png",
+        "generated_prompt": "A colorful, flat illustration representing 'cold', such as a thermometer showing low temperature or a shivering cute character, friendly and educational style, vibrant colors, 1024x1024",
+        "alt_text": "Illustration representing cold temperature",
+        "page_reference": "skiing-basics.json"
+    },
+    {
+        "file_name": "fast.png",
+        "generated_prompt": "A colorful, flat illustration representing 'fast', such as a skier zooming by with motion lines, friendly and educational style, vibrant colors, 1024x1024",
+        "alt_text": "Illustration of a fast skier",
+        "page_reference": "skiing-basics.json"
+    },
+    {
+        "file_name": "fun.png",
+        "generated_prompt": "A colorful, flat illustration representing 'fun', such as a happy face or balloons, friendly and educational style, vibrant colors, 1024x1024",
+        "alt_text": "Illustration representing fun",
+        "page_reference": "skiing-basics.json"
+    },
+    {
+        "file_name": "helmet.png",
+        "generated_prompt": "A colorful, flat illustration of a ski helmet, friendly and educational style, vibrant colors, 1024x1024",
+        "alt_text": "Colorful illustration of a ski helmet",
+        "page_reference": "skiing-basics.json"
+    }
+]

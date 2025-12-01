@@ -1,12 +1,13 @@
 import React, { useEffect, useState } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
-import type { Lesson, GameConfig } from '../../types/lesson';
+import type { Lesson, GameConfig, VocabularyItem } from '../../types/lesson';
 import { LessonLoader } from '../../services/lessonLoader';
 import { useProgress } from '../../contexts/ProgressContext';
 import { ProgressTracker } from '../../services/progressTracker';
 import Flashcard from '../Games/Flashcard';
 import MultipleChoice from '../Games/MultipleChoice';
 import DialogueChat from '../Games/DialogueChat';
+import MemoryGame from '../Games/MemoryGame';
 import './LessonPlayer.css';
 
 const LessonPlayer: React.FC = () => {
@@ -76,7 +77,7 @@ const LessonPlayer: React.FC = () => {
 
         const getVocabulary = () => {
             if (!game.vocabulary) return [];
-            return lesson.vocabulary.filter(v => game.vocabulary?.includes(v.id));
+            return lesson.vocabulary.filter((v: VocabularyItem) => game.vocabulary?.includes(v.id));
         };
 
         switch (game.type) {
@@ -109,8 +110,17 @@ const LessonPlayer: React.FC = () => {
                     />
                 );
 
+            case 'memory':
+                return (
+                    <MemoryGame
+                        data={game}
+                        vocabulary={lesson.vocabulary}
+                        onComplete={handleActivityComplete}
+                    />
+                );
+
             default:
-                return <div>Game type not yet implemented: {game.type}</div>;
+                return <div>Game type not yet implemented: {(game as any).type}</div>;
         }
     };
 
